@@ -1,0 +1,35 @@
+//Berke Kupeli 
+import java.util.Scanner;
+public class SelectionStatString{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Bir satir giriniz:\t");
+        
+        try{
+            while (true){
+        char satir = input.next().charAt(0);
+        
+        if (!Character.isLetter(satir)){
+            throw new IllegalArgumentException("Lutfen sadece bir harf giriniz!");
+        }
+        
+        if  (satir == 'a' || satir =='A'){
+            System.out.println("ilk karakter: a");
+        }
+        else {
+            System.out.println("Ilk karakter a veya A deildir.");
+        }
+        break;
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        finally {
+            System.out.println("Bu mesaji yazdirir");
+        }
+        }
+        
+        
+    }
+}
